@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { useCrypto } from '../context/CryptoContext';
 import { useFetchCrypto } from '../hooks/useFetchCrypto';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 import MarketChart from '../components/MarketChart';
 
 const LoadingSpinner = () => (
@@ -23,7 +24,7 @@ const coinMatches = (coin, query) => {
 const Home = () => {
   const { coins, currency } = useCrypto();
   const { loading, error } = useFetchCrypto();
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useLocalStorage('cryptoSearch', '');
   const inputRef = useRef(null);
 
   useEffect(() => {
