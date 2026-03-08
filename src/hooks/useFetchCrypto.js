@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useCrypto } from '../context/CryptoContext';
+import { useCrypto } from '../context/useCrypto';
 
 export const useFetchCrypto = () => {
   const { setCoins, currency } = useCrypto();

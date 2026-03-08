@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef } from 'react';
-import { useCrypto } from '../context/CryptoContext';
+import { useCrypto } from '../context/useCrypto';
 import { useFetchCrypto } from '../hooks/useFetchCrypto';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import MarketChart from '../components/MarketChart';

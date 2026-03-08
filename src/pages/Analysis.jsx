@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useCrypto } from '../context/CryptoContext';
+import { useCrypto } from '../context/useCrypto';
 import MarketChart from '../components/MarketChart';
 
 const currencies = [

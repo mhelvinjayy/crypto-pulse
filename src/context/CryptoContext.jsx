@@ -1,7 +1,6 @@
-import { createContext, useState, useContext } from 'react';
+import { useState } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-
-const CryptoContext = createContext();
+import { CryptoContext } from './cryptoContextObject';
 
 export const CryptoProvider = ({ children }) => {
   const [coins, setCoins] = useState([]);
@@ -14,4 +13,4 @@ export const CryptoProvider = ({ children }) => {
   );
 };
 
-export const useCrypto = () => useContext(CryptoContext);
+export default CryptoProvider;

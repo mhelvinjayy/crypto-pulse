@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
-import { useCrypto } from '../context/CryptoContext';
+import { useCrypto } from '../context/useCrypto';
 
 const MarketChart = () => {
   const { coins, currency } = useCrypto();
